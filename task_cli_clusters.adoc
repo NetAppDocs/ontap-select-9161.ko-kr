@@ -1,0 +1,36 @@
+---
+sidebar: sidebar 
+permalink: task_cli_clusters.html 
+keywords: administer, administering, cli, clusters 
+summary: ONTAP Select 클러스터를 관리하기 위해 수행할 수 있는 관련 작업이 여러 가지 있습니다. 
+---
+= ONTAP Select 클러스터
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+ONTAP Select 클러스터를 관리하기 위해 수행할 수 있는 관련 작업이 여러 가지 있습니다.
+
+
+
+== ONTAP Select 클러스터 삭제
+
+더 이상 필요하지 않은 ONTAP Select 클러스터는 명령줄 인터페이스를 사용하여 삭제할 수 있습니다.
+
+.이 작업에 관하여
+클러스터는 오프라인 상태여야 합니다.
+
+.단계
+. 관리자 계정을 사용하여 가상 머신 배포 CLI에 Sign in .
+. 클러스터 상태 표시: 
+`cluster show -name CLUSTERNAME`
+. 클러스터가 오프라인이 아닌 경우 오프라인 상태로 전환합니다. 
+`cluster offline -name CLUSTERNAME`
+. 클러스터가 오프라인 상태인지 확인한 후 클러스터를 삭제합니다. 
+`cluster delete -name CLUSTERNAME`
+
