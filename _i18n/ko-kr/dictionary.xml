@@ -1289,8 +1289,6 @@
   <block id="26d0c2c18567614b2696413728c683e7" category="paragraph">또는 단일 LUN에 단일 데이터스토어를 생성하는 것으로 시작할 수 있습니다. 더 큰 ONTAP Select 용량 라이선스가 필요한 추가 공간이 필요한 경우, 해당 공간을 동일한 데이터스토어에 익스텐트로 추가할 수 있으며, 최대 데이터스토어 크기까지 확장할 수 있습니다. 최대 크기에 도달하면 새 데이터스토어를 생성하여 ONTAP Select 에 추가할 수 있습니다. 두 가지 유형의 용량 확장 작업 모두 지원되며, ONTAP Deploy의 스토리지 추가 기능을 사용하여 수행할 수 있습니다. 각 ONTAP Select 노드는 최대 400TB의 스토리지를 지원하도록 구성할 수 있습니다. 여러 데이터스토어에서 용량을 프로비저닝하려면 두 단계의 프로세스가 필요합니다.</block>
   <block id="483c848cf08aacd19acb4d0b41190eb1" category="inline-link-macro">저장 용량을 늘리세요</block>
   <block id="b58c5f0cafd2de6e2a43174f49b5fb62" category="paragraph">초기 클러스터 생성은 초기 데이터 저장소의 일부 또는 전체 공간을 사용하는 ONTAP Select 클러스터를 생성하는 데 사용할 수 있습니다. 두 번째 단계는 원하는 총 용량에 도달할 때까지 추가 데이터 저장소를 사용하여 하나 이상의 용량 추가 작업을 수행하는 것입니다. 이 기능은 섹션에 자세히 설명되어 있습니다. <block ref="707976c9d65fe867eaf11be0a6ab721e" category="inline-link-macro-rx"></block> .</block>
-  <block id="1c3a0084b78822e0ed3892bb67d6be38" category="inline-link-macro">VMware KB 1001618</block>
-  <block id="df2dd4b50329cef60defe7b0e8c9496d" category="admonition">VMFS 오버헤드가 0이 아닙니다(참조 <block ref="9e97a6a937e133b25ea4405a923fbee9" category="inline-link-macro-rx"></block> ), 데이터 저장소에서 비어 있다고 보고된 전체 공간을 사용하려고 시도한 결과 클러스터 생성 작업 중에 잘못된 오류가 발생했습니다.</block>
   <block id="41ebad797f5863853e01363510672b54" category="paragraph">각 데이터스토어에서 2%의 버퍼가 사용되지 않습니다. 이 공간은 ONTAP Select 에서 사용되지 않으므로 용량 라이선스가 필요하지 않습니다. ONTAP Deploy는 용량 제한이 지정되지 않은 경우 버퍼의 정확한 기가바이트 수를 자동으로 계산합니다. 용량 제한이 지정된 경우 해당 크기가 먼저 적용됩니다. 용량 제한 크기가 버퍼 크기 내에 있으면 클러스터 생성이 실패하고 용량 제한으로 사용할 수 있는 올바른 최대 크기 매개변수를 지정하는 오류 메시지가 표시됩니다.</block>
   <block id="f567af5ce47f1c4acb58b73b09111070" category="paragraph">VMFS 6은 새로운 설치와 기존 ONTAP Deploy 또는 ONTAP Select VM의 Storage vMotion 작업 대상으로 모두 지원됩니다.</block>
   <block id="5371e21a364d5455e7007a8b43a2e885" category="paragraph">VMware는 VMFS 5에서 VMFS 6으로의 인플레이스 업그레이드를 지원하지 않습니다. 따라서 Storage vMotion은 모든 VM이 VMFS 5 데이터스토어에서 VMFS 6 데이터스토어로 전환할 수 있도록 하는 유일한 메커니즘입니다. 그러나 ONTAP Select 및 ONTAP Deploy를 통한 Storage vMotion 지원은 VMFS 5에서 VMFS 6으로의 전환이라는 특정 목적 외에도 다른 시나리오를 지원하도록 확장되었습니다.</block>
@@ -3829,4 +3827,5 @@
   <block id="1d6a755bc579447fd7ccaf4c366f016d" category="list-text">ONTAP Select Deploy Mediator와 각 ONTAP Select 노드 간의 RTT는 125ms, 최소 대역폭은 5Mbps입니다</block>
   <block id="2cc135ee22f21247b52a24a050dc5f69" category="list-text">Premium 또는 Premium XL 라이센스</block>
   <block id="3712f888ec8c939491ff4fe2129b3d6e" category="paragraph">MetroCluster SDS는 2노드 ONTAP Select 클러스터를 생성할 때 사용할 수 있는 구성 옵션입니다. 이는 원격 사무소/지점(ROBO) 배포와 유사합니다. 이 향상된 2노드 배포는 추가적인 사용 사례 시나리오를 제공합니다. MetroCluster SDS를 배포하기 전에 요구 사항 및 제한 사항을 숙지해야 합니다.</block>
+  <block id="03cb40fe1372475f8e49ebd07e5d2d9c" category="admonition">VMFS 오버헤드는 0이 아니며(VMware KB 1001618), 데이터스토어에서 사용 가능하다고 보고된 전체 공간을 사용하려고 하면 클러스터 생성 작업 중에 잘못된 오류가 발생합니다.</block>
 </blocks>
