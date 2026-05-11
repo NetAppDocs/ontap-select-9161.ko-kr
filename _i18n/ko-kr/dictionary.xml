@@ -3828,4 +3828,6 @@
   <block id="2cc135ee22f21247b52a24a050dc5f69" category="list-text">Premium 또는 Premium XL 라이센스</block>
   <block id="3712f888ec8c939491ff4fe2129b3d6e" category="paragraph">MetroCluster SDS는 2노드 ONTAP Select 클러스터를 생성할 때 사용할 수 있는 구성 옵션입니다. 이는 원격 사무소/지점(ROBO) 배포와 유사합니다. 이 향상된 2노드 배포는 추가적인 사용 사례 시나리오를 제공합니다. MetroCluster SDS를 배포하기 전에 요구 사항 및 제한 사항을 숙지해야 합니다.</block>
   <block id="03cb40fe1372475f8e49ebd07e5d2d9c" category="admonition">VMFS 오버헤드는 0이 아니며(VMware KB 1001618), 데이터스토어에서 사용 가능하다고 보고된 전체 공간을 사용하려고 하면 클러스터 생성 작업 중에 잘못된 오류가 발생합니다.</block>
+  <block id="02eaca23acd9bd60cfee240891736083" category="inline-link-macro">FlexCache ONTAP Select를 사용한 쓰기 저장</block>
+  <block id="829a60be78f33e711c960543ff962d08" category="paragraph">ONTAP Select에서 FlexCache 쓰기 저장 지원에는 제한 사항이 있습니다. 자세한 내용은 <block ref="43b5c38e400537347d857d4ad7b2dd01" category="inline-link-macro-rx"></block>를 참조하십시오.</block>
 </blocks>

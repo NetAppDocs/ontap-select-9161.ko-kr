@@ -29,6 +29,9 @@ NOTE: 하드웨어별 종속성이 있는 ONTAP 기능은 일반적으로 ONTAP 
 * CIFS
 * 중복 제거 및 압축
 * FlexCache
++
+ONTAP Select에서 FlexCache 쓰기 저장 지원에는 제한 사항이 있습니다. 자세한 내용은 link:https://docs.netapp.com/us-en/ontap-select/concept_ots_overview.html#flexcache-write-back-with-ontap-select["FlexCache ONTAP Select를 사용한 쓰기 저장"^]를 참조하십시오.
+
 * FlexClone
 * iSCSI
 * NDMP
